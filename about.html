@@ -1,133 +1,223 @@
-<!doctype html>
-<html lang="en" data-bs-theme="auto">
-  <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta
-      name="author"
-      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-    />
-    <meta name="generator" content="Astro v5.13.2" />
-    <title>About</title>
-    <link
-      rel="canonical"
-      href="https://getbootstrap.com/docs/5.3/examples/product/"
-    />
-    <script src="../assets/js/color-modes.js"></script>
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <meta name="theme-color" content="#712cf9" />
-    <link href="product.css" rel="stylesheet" />
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: #0000001a;
-        border: solid rgba(0, 0, 0, 0.15);
-        border-width: 1px 0;
-        box-shadow:
-          inset 0 0.5em 1.5em #0000001a,
-          inset 0 0.125em 0.5em #00000026;
-      }
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-      .bi {
-        vertical-align: -0.125em;
-        fill: currentColor;
-      }
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-      .bd-mode-toggle .bi {
-        width: 1em;
-        height: 1em;
-      }
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
-      <div class="container">
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvas"
-          aria-labelledby="offcanvasLabel"
-        >
-          <div class="offcanvas-header">
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav flex-grow-1 justify-content-between">
-              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-            </ul>
-          </div>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Jay Riley</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+
+<style>
+body {
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: system-ui, sans-serif;
+}
+
+.navbar {
+  background: rgba(15, 23, 42, .95);
+  backdrop-filter: blur(10px);
+}
+
+.hero {
+  padding: 90px 20px 50px;
+  text-align: center;
+  background:
+    radial-gradient(circle at top right, #2563eb 0%, transparent 40%),
+    radial-gradient(circle at bottom left, #7c3aed 0%, transparent 40%);
+}
+
+.glass-card {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  transition: .3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: #3b82f6;
+  box-shadow: 0 0 25px rgba(59,130,246,.2);
+}
+
+.section-title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.value-icon {
+  font-size: 2rem;
+  color: #3b82f6;
+  margin-bottom: 1rem;
+}
+
+footer {
+  border-top: 1px solid rgba(255,255,255,.1);
+  margin-top: 80px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Jay Riley</a>
+    <div class="ms-auto">
+      <a href="index.html" class="btn btn-outline-light me-2">Home</a>
+      <a href="projects.html" class="btn btn-primary">Projects</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1 class="display-4 fw-bold">About Me</h1>
+    <p class="lead text-secondary">From healthcare to code — driven by curiosity, built on discipline.</p>
+  </div>
+</section>
+
+<!-- MY STORY -->
+<section class="container py-5">
+  <h2 class="section-title">My Story</h2>
+  <div class="glass-card">
+    <p>
+      I spent years as a Doctor of Chiropractic — diagnosing problems, building trust with patients,
+      and finding solutions under pressure. What I didn't expect was how naturally those same skills
+      would translate to software engineering. The ability to break down a complex problem, trace it
+      to its root cause, and communicate a clear solution is something both fields demand.
+    </p>
+    <p>
+      My transition into tech wasn't accidental. I was drawn to the idea that software lets you build
+      things that scale — tools that can help thousands of people at once, not just one patient at a time.
+      That realization pushed me to go all in.
+    </p>
+    <p class="mb-0">
+      Today I'm completing the MIT xPRO Professional Certificate in Software Engineering while building
+      real full-stack applications, studying applied AI, and sharpening my skills every single day.
+    </p>
+  </div>
+</section>
+
+<!-- WHAT DRIVES ME -->
+<section class="container py-5">
+  <h2 class="section-title">What Drives Me</h2>
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="glass-card text-center h-100">
+        <div class="value-icon"><i class="bi bi-fire"></i></div>
+        <h5 class="fw-bold">Passion for Learning</h5>
+        <p class="text-secondary mb-0">
+          I don't just learn what I need to get by — I go deep. Whether it's a new framework,
+          a design pattern, or an entirely new language, I treat every gap in my knowledge as
+          an opportunity, not a setback.
+        </p>
       </div>
-    </nav>
-    <main>
-      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
-        <div class="col-md-6 p-lg-5 mx-auto my-5">
-          <h1 class="display-3 fw-bold">About Me</h1>
-          <h3 class="fw-normal text-muted mb-3">
-            My bio is on the Home page.
-          </h3>
-        </div>
-    </main>
-    <footer class="container py-5" />
-    <script
-      src="../assets/dist/js/bootstrap.bundle.min.js"
-      class="astro-vvvwv3sm"
-    ></script>
-  </body>
+    </div>
+
+    <div class="col-md-4">
+      <div class="glass-card text-center h-100">
+        <div class="value-icon"><i class="bi bi-hammer"></i></div>
+        <h5 class="fw-bold">All-In Work Ethic</h5>
+        <p class="text-secondary mb-0">
+          I don't do things halfway. From building my first Flask app to architecting a full MERN
+          stack application, I put the same level of care and effort into every line of code.
+          Good enough is never the goal.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="glass-card text-center h-100">
+        <div class="value-icon"><i class="bi bi-people-fill"></i></div>
+        <h5 class="fw-bold">People-First Mindset</h5>
+        <p class="text-secondary mb-0">
+          Years in patient care taught me to listen first and solve second. I bring that same
+          approach to software — building things that are intuitive, accessible, and genuinely
+          useful to the people who use them.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION & CERTIFICATIONS -->
+<section class="container py-5">
+  <h2 class="section-title">Education & Training</h2>
+  <div class="glass-card">
+
+    <div class="d-flex align-items-start mb-4">
+      <i class="bi bi-mortarboard-fill text-primary fs-4 me-3 mt-1"></i>
+      <div>
+        <h5 class="fw-bold mb-1">MIT xPRO — Professional Certificate in Software Engineering</h5>
+        <p class="text-secondary mb-0">
+          Full-stack web development, applied AI, agentic workflows, and modern engineering practices.
+        </p>
+      </div>
+    </div>
+
+    <div class="d-flex align-items-start mb-4">
+      <i class="bi bi-mortarboard-fill text-primary fs-4 me-3 mt-1"></i>
+      <div>
+        <h5 class="fw-bold mb-1">Harvard CS50 & CS50P</h5>
+        <p class="text-secondary mb-0">
+          Computer science fundamentals, algorithms, data structures, and Python development.
+        </p>
+      </div>
+    </div>
+
+    <div class="d-flex align-items-start mb-4">
+      <i class="bi bi-heart-pulse-fill text-primary fs-4 me-3 mt-1"></i>
+      <div>
+        <h5 class="fw-bold mb-1">Doctor of Chiropractic</h5>
+        <p class="text-secondary mb-0">
+          Advanced diagnostic reasoning, patient communication, and clinical problem-solving under pressure.
+        </p>
+      </div>
+    </div>
+
+    <div class="d-flex align-items-start">
+      <i class="bi bi-book-fill text-primary fs-4 me-3 mt-1"></i>
+      <div>
+        <h5 class="fw-bold mb-1">Biology & Health Science — Double Major</h5>
+        <p class="text-secondary mb-0">
+          Foundation in scientific thinking, data analysis, and research methodology.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="container text-center py-5">
+  <h2 class="fw-bold mb-3">Let's Work Together</h2>
+  <p class="text-secondary mb-4">
+    I'm actively looking for software engineering opportunities where I can contribute,
+    grow, and build things that matter.
+  </p>
+  <a href="mailto:jay.rileyx@gmail.com" class="btn btn-primary btn-lg me-2">
+    <i class="bi bi-envelope-fill me-2"></i>Get in Touch
+  </a>
+  <a href="https://www.linkedin.com/in/jay-rileyx" target="_blank" class="btn btn-outline-light btn-lg">
+    <i class="bi bi-linkedin me-2"></i>LinkedIn
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-4">
+  <p class="text-secondary mb-0">© 2026 Jay Riley</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
